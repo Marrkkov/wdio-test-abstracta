@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es2021",
+        "types": [
+            "node",
+            "@wdio/globals/types",
+            "expect-webdriverio",
+            "@wdio/mocha-framework",
+            "wdio-intercept-service"
+        ],
+    },
+    "exclude": ["node_modules"]
+}
