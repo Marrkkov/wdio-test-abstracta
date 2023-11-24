@@ -29,8 +29,5 @@ jobs:
       - name: NPM Install
         run: npm install
     
-      - name: Compile Typescript
-        run: tsc
-    
       - name: Run WDIO tests
         run: npm run run-tests
