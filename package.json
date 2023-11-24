@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run ./configs/wdio.conf.ts",
+    "run-tests": "npx wdio run ./configs/wdio.conf.ts",
     "generate-allure-report": "allure generate allure/allure-results --clean -o allure/allure-report",
     "open-allure-report": "allure open allure/allure-report"
   },
