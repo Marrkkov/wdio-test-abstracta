@@ -23,9 +23,20 @@ describe("Abstracta Tests", () => {
         await timedStep("Taking and screenshot of this step", () =>
             baseClass.takeScreenshot());  
         await timedStep("Validate that 'iPhone' was successfully added", () =>
-            storeOperations.validateProductWasAddedToCart('iPhone'));
-
-    })
+            storeOperations.validateProductWasAddedToCart("iPhone"));
+        await timedStep("Access to cart", () =>
+            storeOperations.accessToViewCart());
+        await timedStep("Wait for checkout page to be loaded", () =>
+            storeOperations.waitForStoreCheckoutPage());
+        await timedStep("Validate iPhone is in products cart", () =>
+            storeOperations.validateProductIsInCart("iPhone"));
+        await timedStep("Remove iPhone from products cart", () =>
+            storeOperations.removeProductFromCart("iPhone"));
+        await timedStep("Validate iPhone is not present in the products cart and the cart is empty", () =>
+            storeOperations.validateCartIsEmpty());
+        await timedStep("Taking and screenshot of this step", () =>
+            baseClass.takeScreenshot()); 
+    });
 
     it("Abstracta Open Cart Functionalities Validation - Fail Scenario", async () => {
         await timedStep("Navigate to opencart", () => browser.url("http://opencart.abstracta.us/"));
@@ -42,7 +53,7 @@ describe("Abstracta Tests", () => {
         await timedStep("Add the product to cart", () =>
             storeOperations.addProductToCart());
         await timedStep("Validate that 'iPhone' was successfully added", () =>
-            storeOperations.validateProductWasAddedToCart('Xiaomi'));
-    })
+            storeOperations.validateProductWasAddedToCart("Xiaomi"));
+    }); 
 })
 

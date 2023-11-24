@@ -14,6 +14,14 @@ export default class AbstractaStoreBasePage {
         return $$("div[class*='product-layout']");
     }
 
+    get cartBtn() {
+        return $("#cart");
+    }
+
+    get dropdownViewCartBtn() {
+        return $("[class='dropdown-menu pull-right'] i[class*=cart]");
+    }
+
     public async waitForPageToBeReady() {
         return baseClass.waitForPage("opencart.abstracta.us/")
     }
