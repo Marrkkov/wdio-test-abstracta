@@ -73,6 +73,7 @@ class StoreOperations {
 
     async removeProductFromCart(product: string) {
         await abstractaStoreCheckoutPage.productsTable.waitForDisplayed();
+        await browser.pause(3000);
         for (let i = 0; i < await abstractaStoreCheckoutPage.getProductsRowsLenght(); i++) { 
             {
             const productsInCartName = await abstractaStoreCheckoutPage.getRowProductName(i).getText();
