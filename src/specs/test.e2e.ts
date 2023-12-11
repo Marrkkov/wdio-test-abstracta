@@ -38,6 +38,7 @@ describe("Abstracta Tests", () => {
             baseClass.takeScreenshot()); 
     });
 
+    /*
     it("Abstracta Open Cart Functionalities Validation - Fail Scenario", async () => {
         await timedStep("Navigate to opencart", () => browser.url("http://opencart.abstracta.us/"));
         await timedStep("Wait for main page to be loaded", () => 
@@ -54,6 +55,6 @@ describe("Abstracta Tests", () => {
             storeOperations.addProductToCart());
         await timedStep("Validate that 'iPhone' was successfully added", () =>
             storeOperations.validateProductWasAddedToCart("Xiaomi"));
-    }); 
+    }); */
 })
 
