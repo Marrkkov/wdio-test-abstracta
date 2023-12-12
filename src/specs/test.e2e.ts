@@ -36,6 +36,7 @@ describe("Abstracta Tests", () => {
             storeOperations.validateCartIsEmpty());
         await timedStep("Taking and screenshot of this step", () =>
             baseClass.takeScreenshot()); 
+        console.log("TESTING JENKINS WEEBHOOK")
     });
 
     /*
