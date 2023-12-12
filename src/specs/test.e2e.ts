@@ -35,8 +35,7 @@ describe("Abstracta Tests", () => {
         await timedStep("Validate iPhone is not present in the products cart and the cart is empty", () =>
             storeOperations.validateCartIsEmpty());
         await timedStep("Taking and screenshot of this step", () =>
-            baseClass.takeScreenshot()); 
-        console.log("TESTING JENKINS WEEBHOOK")
+            baseClass.takeScreenshot());
     });
 
     /*
