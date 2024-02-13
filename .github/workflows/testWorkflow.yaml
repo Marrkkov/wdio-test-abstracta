@@ -1,0 +1,21 @@
+---
+name: Automation Tests Run
+on:
+  workflow_dispatch:
+
+jobs:
+  runTests:
+    name: 'Run WDIO Tests'
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+    
+      - name: NPM Install
+        run: npm install
+    
+      - name: Run WDIO tests
+        run: npm run run-tests
